@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FiFileText,
   FiBarChart,
@@ -38,15 +39,15 @@ export default function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <NavLink href="/dashboard" icon={FiBarChart}>
+            <Link href="/dashboard" icon={FiBarChart}>
               Dashboard
-            </NavLink>
-            <NavLink href="/clients" icon={FiUsers}>
+            </Link>
+            <Link href="/clients" icon={FiUsers}>
               Clients
-            </NavLink>
-            <NavLink href="/reports" icon={FiFileText}>
+            </Link>
+            <Link href="/reports" icon={FiFileText}>
               Reports
-            </NavLink>
+            </Link>
 
             <div className="relative">
               <input
