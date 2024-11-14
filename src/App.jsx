@@ -10,7 +10,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<ExpenseTracker />} />
-        <Route path="/" element={<Clients />} />
+        <Route path="/clients" element={<Clients />} />
       </Routes>
       <Footer />
     </Router>
