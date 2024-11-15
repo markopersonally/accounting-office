@@ -39,13 +39,13 @@ export default function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/dashboard" icon={FiBarChart}>
+            <Link to="/dashboard" icon={FiBarChart}>
               Dashboard
             </Link>
-            <Link href="/clients" icon={FiUsers}>
+            <Link to="/clients" icon={FiUsers}>
               Clients
             </Link>
-            <Link href="/reports" icon={FiFileText}>
+            <Link to="/reports" icon={FiFileText}>
               Reports
             </Link>
 
