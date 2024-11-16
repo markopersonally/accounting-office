@@ -1,4 +1,5 @@
 import Clients from "./components/Clients";
+import Dashboard from "./components/Dashboard";
 import ExpenseTracker from "./components/ExpenseTracker";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ExpenseTracker />} />
         <Route path="/clients" element={<Clients />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
     </Router>
