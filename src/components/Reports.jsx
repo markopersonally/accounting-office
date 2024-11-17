@@ -1,6 +1,6 @@
 import { HiDocumentReport, HiCash, HiChartBar, HiClock } from "react-icons/hi";
 
-export default function AccountingReports() {
+export default function Reports() {
   const reports = [
     {
       title: "Financial Statements",
