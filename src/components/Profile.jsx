@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function Profile() {
   const [photo, setPhoto] = useState("/default-avatar.png");
   const [formData, setFormData] = useState({
