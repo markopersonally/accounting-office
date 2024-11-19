@@ -34,7 +34,10 @@ export default function Settings() {
             <FiUser className="text-gray-700" />
             <span className="text-gray-800">Profile Visibility</span>
           </div>
-          <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
+          <button
+            disabled
+            className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600 "
+          >
             Edit
           </button>
         </div>
