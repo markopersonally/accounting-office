@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import {
   FiFileText,
   FiBarChart,
@@ -23,7 +24,6 @@ const NavLink = ({ href, icon: Icon, children }) => (
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-md">
@@ -63,44 +63,12 @@ export default function Navigation() {
             </button>
 
             <div className="relative">
-              <button
-                onClick={() => setIsProfileOpen(!isProfileOpen)}
-                className="flex items-center space-x-2 focus:outline-none"
-              >
-                <img
-                  src="/placeholder.svg?height=32&width=32"
-                  alt="Avatar"
-                  className="w-8 h-8 rounded-full"
-                />
-                <FiChevronDown
-                  className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${
-                    isProfileOpen ? "transform rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {isProfileOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                  <Link
-                    to="/profile"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Profile
-                  </Link>
-                  <Link
-                    to="/settings"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Settings
-                  </Link>
-                  <Link
-                    to="/logout"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Log out
-                  </Link>
-                </div>
-              )}
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+              <SignedOut>
+                <Link to="/sign-in">Sign In</Link>
+              </SignedOut>
             </div>
           </div>
 
