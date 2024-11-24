@@ -3,7 +3,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
-import { ClerkProvider } from "@clerk/clerk-react";
 import RootLayout from "./layouts/RootLayout.jsx";
 import DashboardLayout from "./layouts/DashboardLayout.jsx";
 import Home from "./components/Home.jsx";

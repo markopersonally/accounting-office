@@ -1,3 +1,5 @@
+import { SignedIn, UserButton } from "@clerk/clerk-react";
+
 export default function Home() {
-  return <div>test</div>;
+  return <div>HOME PAGE</div>;
 }
