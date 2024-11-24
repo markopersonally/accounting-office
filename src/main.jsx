@@ -9,6 +9,7 @@ import Home from "./components/Home.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import SignInPage from "./components/SignInPage.jsx";
 import SignUpPage from "./components/SignUpPage.jsx";
+import ExpenseTracker from "./components/ExpenseTracker.jsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -21,16 +22,15 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { path: "/", element: <Home /> },
-      // { path: "/contact", element: <ContactPage /> },
       { path: "/sign-in/*", element: <SignInPage /> },
       { path: "/sign-up/*", element: <SignUpPage /> },
-      { path: "/dashboard", element: <Dashboard /> },
+
       {
         element: <DashboardLayout />,
         path: "dash",
-        children: [
-          // { path: "/dashboard/invoices", element: <InvoicesPage /> },
-        ],
+        children: [{ path: "/dashboard", element: <Dashboard /> }],
+        children: [{ path: "/expensetracker", element: <ExpenseTracker /> }],
+        children: [{ path: "/dashboard", element: <Dashboard /> }],
       },
     ],
   },
@@ -41,9 +41,5 @@ createRoot(document.getElementById("root")).render(
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
-    {/* <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/"> */}
-    {/* <App /> */}
-
-    {/* </ClerkProvider> */}
   </StrictMode>
 );
