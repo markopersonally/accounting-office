@@ -28,29 +28,27 @@ export default function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <SignedIn>
-              <Link to="/dashboard" icon={FiBarChart}>
-                Dashboard
-              </Link>
-              <Link to="/clients" icon={FiUsers}>
-                Clients
-              </Link>
-              <Link to="/reports" icon={FiFileText}>
-                Reports
-              </Link>
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              </div>
+            <Link to="/dashboard" icon={FiBarChart}>
+              Dashboard
+            </Link>
+            <Link to="/clients" icon={FiUsers}>
+              Clients
+            </Link>
+            <Link to="/reports" icon={FiFileText}>
+              Reports
+            </Link>
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            </div>
 
-              <button className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
-                <FiBell className="w-5 h-5 text-gray-600" />
-              </button>
-            </SignedIn>
+            <button className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+              <FiBell className="w-5 h-5 text-gray-600" />
+            </button>
 
             <div className="relative">
               <SignedIn>
