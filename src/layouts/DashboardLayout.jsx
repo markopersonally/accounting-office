@@ -1,9 +1,9 @@
 import * as React from "react";
 import { useAuth } from "@clerk/clerk-react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, Navigate } from "react-router-dom";
 
 export default function DashboardLayout() {
-  const { userId, isLoaded } = useAuth();
+  const { isSignedIn, isLoaded } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -14,5 +14,5 @@ export default function DashboardLayout() {
 
   if (!isLoaded) return "Loading...";
 
-  return <Outlet />;
+  return isSignedIn ? <Outlet /> : <Navigate to="/sign-in" replace />;
 }

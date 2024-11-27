@@ -19,12 +19,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <a href="/" className="flex-shrink-0 flex items-center">
+            <Link href="/" className="flex-shrink-0 flex items-center">
               <FiFileText className="h-8 w-8 text-blue-500" />
               <span className="ml-2 text-xl font-bold text-gray-800">
                 L I M I T I
               </span>
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
