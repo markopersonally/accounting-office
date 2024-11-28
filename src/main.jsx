@@ -24,12 +24,13 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/sign-in/*", element: <SignInPage /> },
       { path: "/sign-up/*", element: <SignUpPage /> },
-
       {
         element: <DashboardLayout />,
-        children: [{ path: "/dashboard", element: <Dashboard /> }],
-        children: [{ path: "/expensetracker", element: <ExpenseTracker /> }],
-        children: [{ path: "/dashboard", element: <Dashboard /> }],
+        children: [
+          { path: "/dashboard", element: <Dashboard /> },
+          { path: "/expensetracker", element: <ExpenseTracker /> },
+          { path: "/dashboard", element: <Dashboard /> },
+        ],
       },
     ],
   },
