@@ -2,7 +2,6 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { ClerkProvider } from "@clerk/clerk-react";
 import Navigation from "../components/Navigation.jsx";
 import Footer from "../components/Footer.jsx";
-import Home from "../components/Home.jsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
